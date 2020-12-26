@@ -36,16 +36,16 @@ def api():
         json_data = response.json()["CallList"]
       
         # filter data for layout into calltable
-        def client_caller(callerAttribute):
-            return [x[callerAttribute] for x in json_data]
+        # def client_caller(callerAttribute):
+        #     return [x[callerAttribute] for x in json_data]
 
-        Calldate = client_caller("calldate")
-        Called_num = client_caller("called_num")
-        Callerid = client_caller("callerid")
-        Answered = client_caller("answered")
-        Duration = client_caller("duration")
-
-        return render_template("calltable.html", Calldate = Calldate, Called_num = Called_num, Callerid = Callerid, Answered = Answered, Duration = Duration)
+        # Calldate = client_caller("calldate")
+        # Called_num = client_caller("called_num")
+        # Callerid = client_caller("callerid")
+        # Answered = client_caller("answered")
+        # Duration = client_caller("duration")
+        return render_template("calltable.html", callData = json_data)
+        # return render_template("calltable.html", Calldate = Calldate, Called_num = Called_num, Callerid = Callerid, Answered = Answered, Duration = Duration)
     else:
         return render_template("calltable.html")
 
