@@ -3,11 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>CallTable</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename= 'styles/calltable.css')}}">
 </head>
+<!-- 1. Calldate
+2. Called_num
+3. Callerid
+4. Answered
+5. Duration -->
 <body>
-    {{call_Data}}
-
-    </form>
+    <table id="customers">
+        <tr>
+          <th>{{Calldate}}</th>
+          <th>Called Number</th>
+          <th>Caller Id</th>
+          <th>Answered</th>
+          <th>Duration</th>
+        </tr>
+        <tr>
+          <td>Alfreds Futterkiste</td>
+          <td>Maria Anders</td>
+          <td>Germany</td>
+          <td>Germany</td>
+          <td>Germany</td>
+        </tr>
+      </table>
 </body>
 </html>
+
+
+
+
+
+

@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename= 'styles/table.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename= 'styles/index.css')}}">
 </head>
 <body>
     <div class="container login-container">
-        <form action="/calltable" method="POST"> 
+        <form action="/api" method="POST"> 
             <div class="row">
                 <div class="col-md-4 login-form-1">
                     <h3>Start Date</h3>
@@ -36,11 +36,6 @@
                         </div>
                 </div>
             </div>
-        </form>
-        <div>
-            {{startDate}}
-            {{startTime}}
-        </div>
     </div>
 </body>
 </html>
