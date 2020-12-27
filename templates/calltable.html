@@ -25,27 +25,28 @@
        </div>
     </nav>
   </header>
-    <table id="customers">
-        <tr>
-          <th>Call Date</th>
-          <th>Called Number</th>
-          <th>Caller Id</th>
-          <th>Answered</th>
-          <th>Duration</th>
-        </tr>
-        {% for object in callData %}
-          <tr>
-            <td>
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="{{object}}">
-                {{object["calldate"]}}
-              </button>
-            </td>
-            <td>{{object["called_num"]}}</td>
-            <td>{{object["callerid"]}}</td>
-            <td>{{object["answered"]}}</td>
-            <td>{{object["duration"]}}</td>
-          </tr>
-          
+
+  <table id="customers">
+    <tr>
+      <th>Call Date</th>
+      <th>Called Number</th>
+      <th>Caller Id</th>
+      <th>Answered</th>
+      <th>Duration</th>
+    </tr>
+    {% for object in callData %}
+    <tr>
+      <td>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="{{object}}">
+          {{object["calldate"]}}
+        </button>
+      </td>
+      <td>{{object["called_num"]}}</td>
+      <td>{{object["callerid"]}}</td>
+      <td>{{object["answered"]}}</td>
+      <td>{{object["duration"]}}</td>
+    </tr>
+    <!-- popup message -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
       <div class="modal-dialog modal-dialog-scrollable">
         <div class="modal-content">
@@ -56,7 +57,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <p></p>
+            
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -64,18 +65,18 @@
         </div>
       </div>
     </div>
-        <script>
-          $('#exampleModal').on('show.bs.modal', function (event) {
-          var button = $(event.relatedTarget) // Button that triggered the modal
-          var recipient = button.data('whatever') // Extract info from data-* attributes
-          var modal = $(this)
-          // modal.find('.modal-body').text('New message to ' + recipient)
-          modal.find('.modal-title').text('AloTech')
-          modal.find('.modal-body p').text(recipient)
-        })
-        </script>
-      {% endfor %}
-    </table>   
+    <script>
+      $('#exampleModal').on('show.bs.modal', function (event) {
+      var button = $(event.relatedTarget) // Button that triggered the modal
+      var recipient = button.data('whatever') // Extract info from data-* attributes
+      var modal = $(this)
+      // modal.find('.modal-body').text('New message to ' + recipient)
+      modal.find('.modal-title').text('AloTech')
+      modal.find('.modal-body ').text(recipient)
+    })
+    </script>
+    {% endfor %}
+  </table>   
 </body>
 </html>
 

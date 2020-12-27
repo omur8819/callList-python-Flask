@@ -10,7 +10,6 @@ def index():
 @app.route("/api", methods = ["GET", "POST"])
 def api():
     
-
     # get dates from index html
     startdate = request.form.get("startDate").replace(" ", "%")
     finishdate = request.form.get("finishDate").replace(" ", "%")
@@ -29,5 +28,6 @@ def api():
 @app.route("/calltable")
 def callTable():
     return render_template("calltable.html")
+    
 if __name__ == "__main__":
     app.run(debug = True) 
