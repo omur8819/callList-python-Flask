@@ -9,9 +9,6 @@ app = Flask(__name__)
 # %2012:00:00&finishdate=2017-08-04%2013:00:00&app_token=ag9zfnRlbGVmb25pL
 # XRlc3RyHwsSElRlbmFudEFwcGxpY2F0aW9ucxiAgICw46OcCQyiARVzdGFnaW5nMS5h
 # bG8tdGVjaC5jb20
-@app.route("/deneme")
-def deneme():
-    return render_template("deneme.html")
 
 @app.route("/")
 def index():
