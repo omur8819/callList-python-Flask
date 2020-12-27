@@ -4,18 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CallTable</title>
-    <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename= 'styles/calltable.css')}}">
 </head>
 <body>
+  <header>
+    <nav>
+       <div class="menu-icon">
+          <i class="fa fa-bars fa-2x"></i>
+       </div>
+       <div class="logo">
+          <img src="../static/styles/images/alo-tech.png" alt="Brand Logo" width="250px">
+       </div>
+       <div class="menu">
+          <ul>
+             <li><a href="/">Home</a></li>
+          </ul>
+       </div>
+    </nav>
+  </header>
     <table id="customers">
         <tr>
-          <th>Calldate</th>
+          <th>Call Date</th>
           <th>Called Number</th>
           <th>Caller Id</th>
           <th>Answered</th>
@@ -23,10 +35,8 @@
         </tr>
         {% for object in callData %}
           <tr>
-            <!-- Button trigger modal -->
             <td>
               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="{{object}}">
-              <!-- <button id="test" type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop"> -->
                 {{object["calldate"]}}
               </button>
             </td>
@@ -36,56 +46,35 @@
             <td>{{object["duration"]}}</td>
           </tr>
           
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
-  <div class="modal-dialog modal-dialog-scrollable">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-  <script>
-    $('#exampleModal').on('show.bs.modal', function (event) {
-    var button = $(event.relatedTarget) // Button that triggered the modal
-    var recipient = button.data('whatever') // Extract info from data-* attributes
-  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-    var modal = $(this)
-    // modal.find('.modal-title').text('New message to ' + recipient)
-    modal.find('.modal-body').text(typeof recipient)
-})
-  </script>
-        {% endfor %}
-    </table>
-    <!-- Modal -->
-    <!-- <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
       <div class="modal-dialog modal-dialog-scrollable">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+            <h5 class="modal-title" id="exampleModalLabel">New message</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            merhaba
+            
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
-    </div>  -->
+    </div>
+        <script>
+          $('#exampleModal').on('show.bs.modal', function (event) {
+          var button = $(event.relatedTarget) // Button that triggered the modal
+          var recipient = button.data('whatever') // Extract info from data-* attributes
+          var modal = $(this)
+          // modal.find('.modal-title').text('New message to ' + recipient)
+          modal.find('.modal-body').text(recipient)
+        })
+        </script>
+      {% endfor %}
+    </table>   
 </body>
 </html>
 

@@ -1,22 +1,115 @@
+body {
+  font-family: "Helvetica Neue",sans-serif;
+  font-weight: lighter;
+  background-image: url("https://images.pexels.com/photos/3184460/pexels-photo-3184460.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+  background-size: cover;
+}
+
 #customers {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
-    width: 100%;
+    width: 85%;
+    margin: auto;
+    margin-top: 3rem;
+    padding: 2px;
+    margin-bottom: 5%;
+    border-radius: 30px;
+    border-style: hidden; 
   }
   
   #customers td, #customers th {
-    border: 1px solid #ddd;
-    padding: 8px;
+    padding: 3px;
+    text-align: center;
   }
   
-  #customers tr:nth-child(even){background-color: #f2f2f2;}
+  #customers tr:nth-child(even){
+    background-color: rgba(255, 255, 255, 0.664);
+  
+  }
   
   #customers tr:hover {background-color: #ddd;}
   
   #customers th {
     padding-top: 12px;
     padding-bottom: 12px;
-    text-align: left;
-    background-color: #4CAF50;
+    text-align: center;
+    background-color: lightcoral;
     color: white;
   }
+
+  .btn-primary:hover {
+    color: #fff;
+    background-color:lightcoral;
+    border-color:lightcoral;
+  }
+  .btn-primary {
+    background-color: gray;
+    border-color: gray;
+  }
+  .btn-primary:focus{
+    background-color: lightcoral;
+    border-color: lightcoral;
+  }
+
+  .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+    background-color:lightcoral;
+    border-color: lightcoral;
+  }
+
+.content {
+    width: 94%;
+    margin: 4em auto;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: justify;
+}
+
+.logo {
+    line-height: 60px;
+    position: relative;
+    float: left;
+    margin: 16px 46px;
+    letter-spacing: 2px;
+    background-color: rgba(0, 0, 0, 0.356);
+    border-radius: 15px 0 15px 0;
+}
+nav {
+    position: relative;
+    width: 100%;
+    line-height: 60px;
+}
+nav ul {
+    line-height: 60px;
+    list-style: none;
+    background: rgba(0, 0, 0, 0);
+    overflow: hidden;
+    color: #fff;
+    padding: 0;
+    text-align: right;
+    margin: 0;
+    padding-right: 40px;
+    transition: 1s;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 16px 20px;;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: px;
+}
+
+.menu-icon {
+    line-height: 60px;
+    width: 100%;
+    background: #000;
+    text-align: right;
+    box-sizing: border-box;
+    padding: 15px 24px;
+    cursor: pointer;
+    color: #fff;
+    display: none;
+}
