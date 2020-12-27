@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, url_for
+from flask import Flask, render_template, request, url_for, redirect
 import requests
 
 
@@ -9,7 +9,9 @@ app = Flask(__name__)
 # %2012:00:00&finishdate=2017-08-04%2013:00:00&app_token=ag9zfnRlbGVmb25pL
 # XRlc3RyHwsSElRlbmFudEFwcGxpY2F0aW9ucxiAgICw46OcCQyiARVzdGFnaW5nMS5h
 # bG8tdGVjaC5jb20
-
+@app.route("/deneme")
+def deneme():
+    return render_template("deneme.html")
 
 @app.route("/")
 def index():
@@ -34,7 +36,9 @@ def api():
         main_url = base_url + token
         response = requests.get(main_url)
         json_data = response.json()["CallList"]
-      
+
+        
+        # x = [x for x in json_verisi if x["calldate"] == "2017-08-03 14:38:31"]
         # filter data for layout into calltable
         # def client_caller(callerAttribute):
         #     return [x[callerAttribute] for x in json_data]
@@ -49,17 +53,6 @@ def api():
     else:
         return render_template("calltable.html")
 
-
-
-     
-
-# x = [x for x in json_verisi if x["calldate"] == "2017-08-03 14:38:31"]
-# print(x)
-        
-   
-
-
-
 @app.route("/calltable")
 def callTable():
     return render_template("calltable.html")
@@ -68,6 +61,7 @@ def callTable():
     #     return render_template("calltable.html", startDate = startDate, finishDate = finishDate )
     # else:
     #     return render_template("calltable.html")
+
 
 
 if __name__ == "__main__":

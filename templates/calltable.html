@@ -23,23 +23,52 @@
         </tr>
         {% for object in callData %}
           <tr>
-            <td>{{object["calldate"]}}</td>
+            <!-- Button trigger modal -->
+            <td>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="{{object}}">
+              <!-- <button id="test" type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop"> -->
+                {{object["calldate"]}}
+              </button>
+            </td>
             <td>{{object["called_num"]}}</td>
             <td>{{object["callerid"]}}</td>
             <td>{{object["answered"]}}</td>
             <td>{{object["duration"]}}</td>
-            
           </tr>
+          
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <script>
+    $('#exampleModal').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget) // Button that triggered the modal
+    var recipient = button.data('whatever') // Extract info from data-* attributes
+  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+    var modal = $(this)
+    // modal.find('.modal-title').text('New message to ' + recipient)
+    modal.find('.modal-body').text(typeof recipient)
+})
+  </script>
         {% endfor %}
     </table>
-
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
-      Launch static backdrop modal
-    </button>
-
     <!-- Modal -->
-    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <!-- <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-scrollable">
         <div class="modal-content">
           <div class="modal-header">
@@ -49,19 +78,14 @@
             </button>
           </div>
           <div class="modal-body">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, voluptas reiciendis sint iusto dolorem impedit ratione sapiente necessitatibus neque ipsam in earum dolorum debitis obcaecati rem itaque quaerat fuga porro.lorem
+            merhaba
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Understood</button>
           </div>
         </div>
       </div>
-    </div>
-
-
-
-
+    </div>  -->
 </body>
 </html>
 

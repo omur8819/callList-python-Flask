@@ -1,6 +1,8 @@
 .login-container{
     margin-top: 5%;
     margin-bottom: 5%;
+    position: absolute;
+    top: 50px;
 }
 .login-form-1{
     padding: 9%;
