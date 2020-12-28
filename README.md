@@ -35,10 +35,10 @@ pip install requests
 |---| --- | --- |
 | Flask | Jinja | Python 3.8 |
 
-## Landing Page with Home/Users Link
+## Landing Page with Home Link
 ![](Readme-Images/Landing.png)
 
-## Users Table could be edited/added/deleted
+## Users Table could be detailed with Modal by Bootstrap
 ![](Readme-Images/List.png)
 
 ## Add user form into database
