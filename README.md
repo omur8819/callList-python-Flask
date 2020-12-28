@@ -38,9 +38,9 @@ pip install requests
 ## Landing Page with Home Link
 ![](Readme-Images/Landing.png)
 
-## Users Table could be detailed with Modal by Bootstrap
+## Costumers could be listed
 ![](Readme-Images/List.png)
 
-## Add user form into database
+## Costumers Table could be detailed with Modal by Bootstrap
 ![](Readme-Images/PopUp.png)
 
