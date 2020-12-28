@@ -3,7 +3,7 @@ Information Measurement Project
 
 * This Project can be connected by Google Cloud App Engine [https://hasandalkilic2020.ey.r.appspot.com/](https://hasandalkilic2020.ey.r.appspot.com/)
 
-It is a set of operations we get servers to execute 
+It is a set of operations, getting servers to execute 
 
 * Search in Call List database on "/"
 * Fetch data from base domain url with "Request" Module
