@@ -11,7 +11,7 @@ It is a set of operations we get servers to execute
 * Generate dynamic Modal (PopUp) 
 * Designed with BootStrap 4.1.1
 
-# Flask Web Framework and Requests module  installed
+# Flask Web Framework and Requests Module  installed
 ``` 
 pip install flask
 pip install requests
@@ -27,7 +27,7 @@ pip install requests
 - Werkzeug==1.0.1
 
 # Connect to database
-* used <b>Request</b> module in order to connect <b>Company API</b> 
+* Used <b>Request</b> module in order to connect <b>Company API</b> 
 * This project deployment to Google Cloud App Engine system
 
 # Designed by using MVC construction
