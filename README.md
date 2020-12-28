@@ -11,13 +11,13 @@ It is a set of operations we get servers to execute
 * Generate dynamic Modal (PopUp) 
 * Designed with BootStrap 4.1.1
 
-# Flask Web Framework and Requests Module  installed
+## Flask Web Framework and Requests Module  installed
 ``` 
 pip install flask
 pip install requests
 ```
 
-# Installed dependcies packages
+## Installed dependcies packages
 - Flask==1.1.2
 - gunicorn==20.0.4
 - click==7.1.2
@@ -26,21 +26,21 @@ pip install requests
 - MarkupSafe==1.1.1
 - Werkzeug==1.0.1
 
-# Connect to database
+## Connect to database
 * Used <b>Request</b> module in order to connect <b>Company API</b> 
 * This project deployment to Google Cloud App Engine system
 
-# Designed by using MVC construction
+## Designed by using MVC construction
 | MODEL | VIEW | CONTROLLER |
 |---| --- | --- |
 | Flask | Jinja | Python 3.8 |
 
-# Landing Page with Home/Users Link
+## Landing Page with Home/Users Link
 ![](Readme-Images/Landing.png)
 
-# Users Table could be edited/added/deleted
+## Users Table could be edited/added/deleted
 ![](Readme-Images/List.png)
 
-# Add user form into database
+## Add user form into database
 ![](Readme-Images/PopUp.png)
 
