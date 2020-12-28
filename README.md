@@ -17,7 +17,7 @@ pip install flask
 pip install requests
 ```
 
-## Installed dependcies packages
+## Installed dependecies packages
 - Flask==1.1.2
 - gunicorn==20.0.4
 - click==7.1.2
